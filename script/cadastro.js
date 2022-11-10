@@ -11,13 +11,12 @@ image.style.width = '20px';
 image.style.height = '20px';
 
 // selecionando input
-const input = document.getElementsByName('name');
+const input = document.getElementsByName('name')[0];
 // modificando placeholder do input
-input[0].placeholder = 'Primeiro Nome';
+input.placeholder = 'Primeiro Nome';
 
-// modificando CSS de todos elementos inputs
+// Alterando a borda de todos elementos
 let cssInput = document.querySelectorAll('body .form-auth input');
-// modificando cada elemento com a estrutura de repetição forEach
 cssInput.forEach(input => {
   input.style.cssText += 'border-radius: 25px';
 });
@@ -31,3 +30,8 @@ cssBody.style.cssText += 'background-color: #fafafa';
 let form = document.querySelector('.form-auth');
 // aplicando estilização no formulário;
 form.style.cssText += "display: flex; flex-flow: column;";
+
+// Adicionando um elemento no formulario;
+const dateInput = document.createElement('input');
+dateInput.type = 'date';
+form.insertBefore(dateInput, input);
