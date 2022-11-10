@@ -34,4 +34,5 @@ form.style.cssText += "display: flex; flex-flow: column;";
 // Adicionando um elemento no formulario;
 const dateInput = document.createElement('input');
 dateInput.type = 'date';
+dateInput.name = 'date';
 form.insertBefore(dateInput, input);
